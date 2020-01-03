@@ -1,8 +1,11 @@
 ﻿<!-- nav -->
 <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
     <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/">Home</a>
-        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+        <a class="nav-item nav-link" routerLink="/">Accueil</a>
+        <a class="nav-item nav-link" routerLink="/">Historique</a>
+        <a class="nav-item nav-link" routerLink="/">Paramétrage</a>
+        <a class="nav-item nav-link" routerLink="/">Mon Profil</a>
+        <a class="nav-item nav-link" (click)="logout()">Se Deconnecter</a>
     </div>
 </nav>
 
