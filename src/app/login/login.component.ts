@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { User } from '../models/user';
+import { Administrateur } from '../models/administrateur';
 
 import { BdlocaleService } from '../services/bdlocale.service';
 import { UserStoreService } from '../services/user-store.service';
@@ -15,7 +15,7 @@ import { UserStoreService } from '../services/user-store.service';
 
 export class LoginComponent implements OnInit {
 
-  public static userCourant: User = null;
+  public static userCourant: Administrateur = null;
   public form: FormGroup;
   public submitting: boolean = false;
   public errorMessage: string = '';
@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
     if (this.form.valid) {
       const username = this.form.get('username').value;
       const password = this.form.get('password').value;
-      console.log(this.form.value);
+      //console.log(this.form.value);
       this.bdService.verify(username, password).then(
         (success) => {
           if (success !== null) {

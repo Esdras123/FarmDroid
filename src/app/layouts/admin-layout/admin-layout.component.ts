@@ -6,7 +6,7 @@ import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import PerfectScrollbar from 'perfect-scrollbar';
 import { Observable } from 'rxjs';
-import { User } from 'app/models/user';
+import { Administrateur } from 'app/models/administrateur';
 
 @Component({
     selector: 'app-admin-layout',
@@ -17,7 +17,7 @@ export class AdminLayoutComponent implements OnInit {
     private _router: Subscription;
     private lastPoppedUrl: string;
     private yScrollStack: number[] = [];
-    public static userCourant: User = {nom: "admin", tel: "000000", email: "admin@gmail.com", pseudo: "admin", adresse: "#", mdp: "admin"};
+    public static userCourant: Administrateur = {nom: "admin", tel: "000000", email: "admin@gmail.com", pseudo: "admin", adresse: "#", mdp: "admin"};
 
     constructor(public location: Location, private router: Router) { }
 

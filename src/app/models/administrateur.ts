@@ -1,8 +1,8 @@
 /**
     * La classe représentant un utilisateur
-    * @class User
+    * @class Administrateur
 */
-export class User {
+export class Administrateur {
     nom: string;
     tel: string;
     email: string;

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { resolve } from 'q';
-import { User } from '../models/user';
+import { Administrateur } from '../models/administrateur';
 import { LoginComponent } from 'app/login/login.component';
 
 
@@ -17,7 +17,7 @@ export class BdlocaleService {
   constructor() { }
 
   //a construire et a utiliser lorsqu'on veut reenregistrer le profil utilisateur
-  async setUser(user: User): Promise<Boolean> {
+  async setUser(user: Administrateur): Promise<Boolean> {
     return new Promise<Boolean>((resolve, reject) => {
       LoginComponent.userCourant = user;
       resolve(true);
@@ -31,8 +31,8 @@ export class BdlocaleService {
     * @param {string} mdp - mot de passe de l'User 
     * @return User
   */
-  async verify(nom: string, mdp: string): Promise<User> {
-    let user = new User();
+  async verify(nom: string, mdp: string): Promise<Administrateur> {
+    let user = new Administrateur();
     user.adresse = "Melen";
     user.email = "admin@admin.com";
     user.mdp = "admin";
@@ -40,7 +40,7 @@ export class BdlocaleService {
     user.pseudo = "admin";
     user.tel = "xxx";
 
-    return new Promise<User>((resolve, reject) => {
+    return new Promise<Administrateur>((resolve, reject) => {
       if(user.nom == nom && user.mdp == mdp){
         resolve(user);
       }

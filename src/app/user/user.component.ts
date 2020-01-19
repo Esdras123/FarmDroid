@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'app/models/user';
+import { Administrateur } from 'app/models/administrateur';
 import { AdminLayoutComponent } from 'app/layouts/admin-layout/admin-layout.component';
 
 @Component({
@@ -8,7 +8,7 @@ import { AdminLayoutComponent } from 'app/layouts/admin-layout/admin-layout.comp
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  user: User;
+  user: Administrateur;
   constructor() {
     this.user = AdminLayoutComponent.userCourant;
    }
