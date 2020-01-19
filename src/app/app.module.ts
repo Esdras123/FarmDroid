@@ -44,6 +44,7 @@ import { MatSelectModule } from '@angular/material';
 import { ParamsCultureComponent } from './params-culture/params-culture.component';
 import { GestionNoeudComponent } from './gestion-noeud/gestion-noeud.component';
 import { HistoriqueComponent } from './historique/historique.component';
+import { FarmService } from './services/farm.service';
 
 @NgModule({
   imports: [
@@ -89,6 +90,7 @@ import { HistoriqueComponent } from './historique/historique.component';
     NoeudMaitreService,
     TypeService,
     ParametrageService,
+    FarmService,
   ],
   bootstrap: [AppComponent]
 })
